@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: #e8f5e9; /* Light green background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main App container */
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Join Chat Container (if you still have it) */
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.joinChatContainer h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.joinChatContainer input {
+  width: 250px;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #43a047;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.joinChatContainer input:focus {
+  border-color: #2e7d32;
+}
+
+.joinChatContainer button {
+  width: 260px;
+  padding: 12px;
+  margin-top: 10px;
+  background: #43a047;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.joinChatContainer button:hover {
+  background: #2e7d32;
+}
+
+/* Chat Component Container */
+.Chat {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Room & Username Data */
+.room-data {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username,
+#room {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin: 5px;
+}
+
+/* Chat Window */
+.chat-window {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat Header */
+.chat-header {
+  background: #2e7d32;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  background: #f1f8e9;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* The ScrollToBottom wrapper */
+.message-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Force a margin between each message bubble */
+.message {
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 16px; /* <--- This ensures a gap after each bubble */
+}
+
+/* "You" = Right Aligned */
+.message.you {
+  margin-left: auto;  /* push bubble to the right */
+  background: #43a047;
+  color: #fff;
+  border-top-right-radius: 0;
+  text-align: left;
+}
+
+/* "Other" = Left Aligned */
+.message.other {
+  margin-right: auto; /* push bubble to the left */
+  background: #dcedc8;
+  color: #000;
+  border-top-left-radius: 0;
+  text-align: left;
+}
+
+/* Inside bubble */
+.message-content {
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Message metadata (time, author) */
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background: #e8f5e9;
+  border-top: 1px solid #c5e1a5;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #43a047;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  background: #2e7d32;
+}
